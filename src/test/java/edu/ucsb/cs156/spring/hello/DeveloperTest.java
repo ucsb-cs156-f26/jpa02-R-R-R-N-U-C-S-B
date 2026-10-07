@@ -43,7 +43,6 @@ public class DeveloperTest {
         assertTrue(t.getMembers().contains("Ryan R"), "Team should contain Ryan R");
         assertTrue(t.getMembers().contains("Vishwath"), "Team should contain Vishwath");
     }
-    // TODO: Add additional tests as needed to get to 100% jacoco line coverage, and
-    // 100% mutation coverage (all mutants timed out or killed)
+    
 
 }
