@@ -16,7 +16,7 @@ public class TeamTest {
     //Test for name fetching
     @Test
     public void getName_returns_correct_name() {
-       assert(team.getName().equals("test-team"));
+       assertEquals("test-team", team.getName());
     }
     //Test for string fetching/validation
     @Test
@@ -43,6 +43,13 @@ public class TeamTest {
     @Test
     public void equals_returns_false_for_non_equivalent_teams() {
         Team other = new Team("non-equivalent-team");
+        assertEquals(false, team.equals(other));
+    }
+    //Test for other group validation/members (false case)
+    @Test
+    public void equals_returns_false_for_different_members(){
+        Team other = new Team("test-team");
+        other.addMember("someone");
         assertEquals(false, team.equals(other));
     }
     //Hash test presented by Professor Conrad
